@@ -1,8 +1,9 @@
-FROM rasa/rasa:1.9.3
+FROM rasa/rasa
 
 COPY app /app
-COPY server.sh /app/server.sh
 
-RUN rasa train nlu
+EXPOSE 5005
+
+COPY server.sh /app/server.sh
 
 ENTRYPOINT ["/app/server.sh"]
