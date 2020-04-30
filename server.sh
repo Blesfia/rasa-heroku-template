@@ -5,4 +5,4 @@ then
   PORT=5005
 fi
 
-rasa run --enable-api --port $PORT
+rasa run -m model.tar.gz --enable-api --remote-storage aws --port $PORT
