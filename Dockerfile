@@ -1,4 +1,4 @@
-FROM rasa/rasa
+FROM rasa/rasa:latest-full
 
 COPY app /app
 
